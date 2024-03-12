@@ -38,7 +38,7 @@ nav {
 
 nav img {
     color: red;
-    width: 130px;
+    width: 114px;
     position: relative;
     z-index: 10;
 }
@@ -48,7 +48,6 @@ nav button {
     z-index: 10;
 }
 
-/* Simplified hero styles */
 .hero {
     height: calc(100% - 100px); /* Adjusted height calculation for better responsiveness */
     display: flex;
@@ -56,9 +55,9 @@ nav button {
     align-items: center;
     flex-direction: column;
     color: white;
+    position: relative;
     gap: 23px;
     padding: 0px 30px;
-    text-align: center; /* Centered text */
 }
 
 
@@ -80,6 +79,39 @@ nav button {
     text-align: center;
 }
 
+/* Simplified hero styles */
+@media  screen and (max-width:550px){
+    nav {
+        max-width: 85vw;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100px;
+    }
+    .hero-button{
+        flex-direction: column;
+    }
+    .first .secImg img {
+        width: 300px;
+        position: relative;
+        z-index: 10;
+    }
+    .first .secImg video {
+        position: absolute;
+        top: 78px;
+        right: 5px;
+        width: 253px;
+    }
+    section.first > div :nth-child(2) {
+        font-size: 19px;
+    }
+    section.first > div :nth-child(1) {
+        font-size: 40px;
+        font-weight: bolder;
+    }
+
+}
 .seperation {
     height: 7px;
     background-color: rgb(46, 44, 44);
@@ -111,7 +143,6 @@ nav button {
     background-color: red;
     color: white;
 }
-
 .hero-button {
     display: flex;
     justify-content: center;
@@ -140,10 +171,12 @@ nav button {
 }
 
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 550px) {
    .first{
     flex-wrap: wrap;
    }
+
+
 }
 .secImg{
     position:relative;
@@ -220,4 +253,13 @@ footer .questions{
     display: flex;
     flex-direction: column;
     gap: 23px;
+}
+@media  screen and (max-width:550px){
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        color: white;
+        align-items: center;
+        justify-content: center;
+    }
 }
